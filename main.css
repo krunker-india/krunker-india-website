@@ -1,4 +1,5 @@
 @import url('"https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap"');
+
 * {
     padding: 0;
     margin: 0;
@@ -12,7 +13,7 @@
 
 body {
     font-family: 'Sansita Swashed', sans-serif;
-    background-color: #0f0800;
+    /*background-color: #0f0800;*/
 }
 
 .top {
@@ -34,7 +35,7 @@ ul li a {
     margin: 2px 8px;
     transition: all 0.3s;
 }
-a:hover{
+a:hover {
     transform : scale(1.5);
 }
 #header {
@@ -43,7 +44,8 @@ a:hover{
     font-family: 'Sansita Swashed', sans-serif;
     justify-content: center;
 }
-.headerBar{position:absolute;
+.headerBar {
+    position:absolute;
     top:0;
     height:70px;
     padding:0 12px;
@@ -52,11 +54,16 @@ a:hover{
     flex-direction:row;
     align-items:center;
     background-color:rgba(0,0,0,.1);
-    pointer-events:auto}
-.headerBarRight{right:0;
+    pointer-events:auto;
+}
+
+.headerBarRight {
+    right:0;
     padding-left:20px;
-    border-radius:0 0 0 6px}
-.imageButton{
+    border-radius:0 0 0 6px;
+}
+
+.imageButton {
     display:inline-block!important;
     background-size:contain;
     background-repeat:no-repeat;
@@ -64,29 +71,47 @@ a:hover{
     pointer-events:all;
     cursor:pointer;
     -webkit-transition:all .2s;
-    transition:all .2s}
+    transition:all .2s;
+}
+
 .imageButton:hover{
     -webkit-transform:scale(.95);
-    transform:scale(.95)}
-.discordSocial{
+    transform:scale(.95);
+}
+
+.discordSocial {
     width:50px;
     height:56px;
     background-image:url(./img/discord-normal.png);
 }
-.discordSocial:hover{background-image:url(./img/discord-hover.png)}
-.discordSocial:active{background-image:url(./img/discord-pressed.png)}
-.twitterSocial{
+
+.discordSocial:hover {
+    background-image:url(./img/discord-hover.png);
+}
+
+.discordSocial:active {
+    background-image:url(./img/discord-pressed.png);
+}
+
+.twitterSocial {
     width:50px;
     height:56px;
-    background-image:url(./img/twitter-normal.png);
-    
+    background-image:url(./img/twitter-normal.png);    
 }
-.twitterSocial:hover{background-image:url(./img/twitter-hover.png)}
-.twitterSocial:active{background-image:url(./img/twitter-pressed.png)}
+
+.twitterSocial:hover {
+    background-image:url(./img/twitter-hover.png);
+}
+
+.twitterSocial:active {
+    background-image:url(./img/twitter-pressed.png);
+}
+
 #header h1 {
     display: flex;
     font-size: 50px;
 }
+
 .banner {
     width: 100%;
     height: 80vh;
