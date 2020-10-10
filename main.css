@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Tangerine');
+@import url('https://fonts.googleapis.com/css?family=Droid+Sans');
 * {
     padding: 0;
     margin: 0;
@@ -11,7 +11,7 @@
 }
 
 body {
-    font-family: 'Tangerine', sans-serif;
+    font-family: 'Droid Sans', sans-serif;
     background-color: #130f0b;
 }
 
