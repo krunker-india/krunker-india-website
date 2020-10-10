@@ -1,32 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Tangerine');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
 :root {
-    /* variables */
-    --base: 10;
+    --primary-color: white;
 }
 
 body {
-    background-color: #202225;
-    margin: 0;
-    padding: 0;
+    font-family: 'Tangerine', sans-serif;
+    background-color: #292218;
 }
 
-.corner {
-    background-color: #08BEF3;
-    width: 0;
-    height: 0;
-    z-index: 1;
-    border-left: 150px solid transparent;
-    border-bottom: 150px solid #202225;
-    align-content: center;
-    top: 0;
-    left: 0;
-    position: absolute;
+.top {
+    display: flex;
+    justify-content: center;
 }
 
-.corner_cont {
-    height: 16vh;
-    transform-origin: left;
+ul {
+    display: flex;
+    margin-top: 32px;
+}
+
+ul li a {
+    color: white;
+    font-size: 24px;
+    padding: 8px 16px;
+    margin: 4px 8px;
+    position: relative;
+    transition: all 0.6s;
+}
+
+a:hover {
+    background-color: var(#1C1C18);
+    color: white;
+}
+
+a:before {
+    content: '';
     position: absolute;
-    z-index: 2;
-    top: 0;
-    left: 0;
+    bottom: 12px;
+    left: 12px;
+    width: 12px;
+    height: 12px;
+    border: 3px solid var(--primary-color);
+    border-width: 0 0 3px 3px;
+    transition: all 0.3s;
+    opacity: 0;
+}
+
+a:hover:before {
+    bottom: -8px;
+    left: -8px;
+    opacity: 1;
+}
+
+a:after {
+    content: '';
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 12px;
+    height: 12px;
+    border: 3px solid var(--primary-color);
+    border-width: 3px 3px 0 0;
+    transition: all 0.3s;
+    opacity: 0;
+}
+
+a:hover:after {
+    top: -8px;
+    right: -8px;
+    opacity: 1;
+}
+
+#header {
+    display: flex;
+    margin-top: 30vh;
+    font-family: 'Tangerine', sans-serif;
+    justify-content: center;
+}
+
+#header h1 {
+    display: flex;
+    font-size: 50px;
 }
