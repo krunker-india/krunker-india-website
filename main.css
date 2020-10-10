@@ -1,0 +1,32 @@
+:root {
+    /* variables */
+    --base: 10;
+}
+
+body {
+    background-color: #202225;
+    margin: 0;
+    padding: 0;
+}
+
+.corner {
+    background-color: #08BEF3;
+    width: 0;
+    height: 0;
+    z-index: 1;
+    border-left: 150px solid transparent;
+    border-bottom: 150px solid #202225;
+    align-content: center;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.corner_cont {
+    height: 16vh;
+    transform-origin: left;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+}
