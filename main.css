@@ -37,7 +37,7 @@ ul li a {
 #header {
     display: flex;
     margin-top: 30vh;
-    font-family: 'Tangerine', sans-serif;
+    font-family: 'Droid Sans', sans-serif;
     justify-content: center;
 }
 
