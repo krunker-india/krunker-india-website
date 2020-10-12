@@ -1,28 +1,5 @@
-@font-face {
-    font-family: "FFF Forward";
-    src: url('./font/FFF-Forward.ttf');
-}
-
-@font-face {
-    font-family: "Creepster";
-    src: url("./font/Creepster-Regular.ttf");
-}
-
-@font-face {
-    font-family: "Griffy";
-    src: url("./font/Griffy-Regular.ttf");
-}
-
-@font-face {
-    font-family: "Commissioner";
-    src: url("./font/Commissioner-VariableFont_wght.ttf");
-}
-
-* {
-    padding: 0;
-    margin: 0;
+    * {
     box-sizing: border-box;
-    color: white;
 }
 
 body {
@@ -31,6 +8,9 @@ body {
     background-size: 133% 100vh;
     background-position: top;
     font-family: 'Papyrus';
+    color: white;
+    padding: 0;
+    margin: 0;
 }
 
 #overlay {
@@ -45,6 +25,25 @@ body {
 
 #overlay:hover {
     opacity: 0.2;
+}
+
+#window-size-overlay {
+    position: fixed;
+    background-color: white;
+    height: 100vh;
+    width: 100%;
+    display: block;
+    justify-content: center;
+    color: #000000 !important;
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: content-box;
+}
+
+#window-size-overlay center {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 #header-container {
