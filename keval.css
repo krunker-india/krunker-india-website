@@ -63,8 +63,7 @@ body {
 .header-item {
     width: 50px;
     height: 50px;
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: 10px;
     display: block;
     text-align: center;
     font-size: 30px;
@@ -76,6 +75,10 @@ body {
 
 .header-item:hover {
     background-color: rgba(128, 128, 128, 0.2);
+}
+
+.header-logo {
+    margin-left: 5px;
 }
 
 .header-item img, .header-logo img {
