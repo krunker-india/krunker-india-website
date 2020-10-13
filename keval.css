@@ -5,12 +5,14 @@
 body {
     background-image: url(img/banner.png);
     background-repeat: no-repeat;
-    background-size: 133% 100vh;
+    /*background-size: 133% 100%;*/
     background-position: top;
     font-family: 'Papyrus';
     color: white;
     padding: 0;
     margin: 0;
+    height: 100%;
+    width: 100%;
 }
 
 #overlay {
@@ -30,7 +32,7 @@ body {
 #window-size-overlay {
     position: fixed;
     background-color: white;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     display: none;
     justify-content: center;
@@ -96,7 +98,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    height: 100vh;
+    height: 100%;
     width: 100%;
 }
 
