@@ -16,10 +16,10 @@ function checkWindowSize(){
     var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     var h = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
 
-    if(w > h && (windowSizeOverlay.style.display == "" || windowSizeOverlay.style.display == "block")) {
-        windowSizeOverlay.style.display = "none";
-    } else {
+    if(w < h && (windowSizeOverlay.style.display == "" || windowSizeOverlay.style.display == "none")) {
         windowSizeOverlay.style.display = "block";
+    } else {
+        windowSizeOverlay.style.display = "none";
     }
 }
 

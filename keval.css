@@ -32,7 +32,7 @@ body {
     background-color: white;
     height: 100vh;
     width: 100%;
-    display: block;
+    display: none;
     justify-content: center;
     color: #000000 !important;
     font-family: 'Courier New', Courier, monospace;
