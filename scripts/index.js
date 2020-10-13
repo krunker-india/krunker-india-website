@@ -6,9 +6,11 @@ window.addEventListener("load", () => {
     checkWindowSize(); // For detecting portrait mode
 });
 
-// Making the website friendly :kappa:
+// Making the website mobile friendly :kappa:
 
 const windowSizeOverlay = document.getElementById("window-size-overlay");
+
+var landscape = true;
 
 window.addEventListener("resize", checkWindowSize);
 
@@ -18,8 +20,15 @@ function checkWindowSize(){
 
     if(w < h && (windowSizeOverlay.style.display == "" || windowSizeOverlay.style.display == "none")) {
         windowSizeOverlay.style.display = "block";
+        landscape = false;
     } else {
         windowSizeOverlay.style.display = "none";
+        landscape = true;
+    }
+
+    if(landscape){
+        document.body.style.backgroundSize = `133% ${h}px`;
+        document.body.style.height = h + "px";
     }
 }
 
