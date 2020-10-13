@@ -1,6 +1,16 @@
+// Utility Functions
+
+var getID = (id) => document.getElementById(id);
+
+var getClass = (classname, index) => {
+    return (index === undefined)
+        ? document.getElementsByClassName(classname)
+        : document.getElementsByClassName(classname)[index];
+}
+
 // Init stuff
 
-const bodyWrapper = document.getElementById("body-wrapper");
+const bodyWrapper = getID("body-wrapper");
 
 window.addEventListener("load", () => {
     checkWindowSize(); // For detecting portrait mode
@@ -8,7 +18,7 @@ window.addEventListener("load", () => {
 
 // Making the website mobile friendly :kappa:
 
-const windowSizeOverlay = document.getElementById("window-size-overlay");
+const windowSizeOverlay = getID("window-size-overlay");
 
 var landscape = true;
 
@@ -34,7 +44,7 @@ function checkWindowSize(){
 
 // Header Logo animation on hover
 
-const logo_img = document.getElementById("header-logo-img");
+const logo_img = getID("header-logo-img");
 
 logo_img.addEventListener("mouseover", () => {
     logo_img.src = "./img/logo.gif";
@@ -46,7 +56,7 @@ logo_img.addEventListener("mouseleave", () => {
 
 // Jumpscare
 
-const jumpscare_div = document.getElementsByClassName("jumpscare")[0];
+const jumpscare_div = getClass("jumpscare", 0);
 const jumpscare_sound = new Audio("./sounds/jumpscare.mp3");
 
 logo_img.addEventListener("click", () => {
