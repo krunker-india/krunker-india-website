@@ -1,8 +1,15 @@
+// Init stuff
+
+const bodyWrapper = document.getElementById("body-wrapper");
+
+window.addEventListener("load", () => {
+    checkWindowSize(); // For detecting portrait mode
+});
+
 // Making the website friendly :kappa:
 
 const windowSizeOverlay = document.getElementById("window-size-overlay");
 
-window.addEventListener("load", checkWindowSize);
 window.addEventListener("resize", checkWindowSize);
 
 function checkWindowSize(){
@@ -43,3 +50,14 @@ logo_img.addEventListener("click", () => {
         jumpscare_div.style.display = "none";
     }, 4000);
 });
+
+// Background Music
+
+bodyWrapper.addEventListener("click", () => playBackgroundMusic);
+
+function playBackgroundMusic() {
+    console.log("lol");
+    const backgound_sound = new Audio("./sounds/background.mp3");
+    backgound_sound.loop = true;
+    backgound_sound.play();
+}
