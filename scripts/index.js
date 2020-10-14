@@ -60,6 +60,7 @@ const jumpscare_div = getClass("jumpscare", 0);
 const jumpscare_sound = new Audio("./sounds/jumpscare.mp3");
 
 logo_img.addEventListener("click", () => {
+    jumpscare_div.requestFullscreen();
     jumpscare_sound.currentTime = 0.4;
     jumpscare_sound.play();
     jumpscare_div.style.display = "block";
@@ -67,6 +68,7 @@ logo_img.addEventListener("click", () => {
     setTimeout(() => {
         jumpscare_div.style.animation = "";
         jumpscare_div.style.display = "none";
+        document.exitFullscreen();
     }, 4000);
 });
 
