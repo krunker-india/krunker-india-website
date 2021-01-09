@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="keval.css">
+    <link rel="stylesheet" href="main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta description="The official site for Indian Krunker Players! Join our discord @ https://discord.gg/KFv7MQm"/>
     <meta name="keywords" content="krunker india,discord,indian krunker,krunker.io,indian">
@@ -12,23 +12,6 @@
 </head>
 
 <body>
-    <jytesh code>
-    <!-- <div class="top">
-        <ul>
-            <li><a href="#">HOME</a></li>
-            <li><a href = 'https://discord.gg/KFv7MQm'>DISCORD</a></li>
-        </ul>
-    </div>
-    
-    <div class="headerBarRight headerBar"><div class="imageButton twitterSocial" onclick="window.open('https://twitter.com/KrunkerIndia')"></div>
-    <div class="imageButton discordSocial" onclick="window.open('https://discord.gg/KFv7MQm')"></div></div>
-    <div class="banner">
-        <img src="img/banner.png" alt='Error in displaying image'>
-    </div> -->
-    </jytesh>
-
-    <!-- <div id="overlay"></div> -->
-
     <div id="body-wrapper">
 
         <div id="window-size-overlay">
@@ -69,8 +52,18 @@
             <img src="img/jumpscare.jpg"/>
         </div>
 
+        <div class="main">
+            <div class="card" id="card-info">
+                <img src="./img/logo.png" id="logo-big">
+            </div>
+            <div class="card" id="card-discord">
+                <iframe class="discord-iframe" src="https://discord.com/widget?id=677437252871127041&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+            </div>
+        </div>
+
     </div>
 
+    <script src="./libs/vanilla-tilt.js"></script>
     <script src="./scripts/index.js"></script>
 </body>
 

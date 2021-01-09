@@ -1,126 +1,169 @@
-@import url('"https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap"');
-
 * {
-    padding: 0;
-    margin: 0;
     box-sizing: border-box;
-    color: white;
-}
-
-:root {
-    --primary-color: white;
 }
 
 body {
-    font-family: 'Sansita Swashed', sans-serif;
-    /*background-color: #0f0800;*/
-}
-
-.top {
-    display: flex;
-    justify-content: center;
-}
-
-ul {
-    display: flex;
-    margin-top: 32px;
-    list-style-type: none;
-}
-
-ul li a {
-    color: rgb(255, 145, 0);
-    text-decoration: none;
-    font-size: 20px;
-    padding: 4px 12px;
-    margin: 2px 8px;
-    transition: all 0.3s;
-}
-a:hover {
-    transform : scale(1.5);
-}
-#header {
-    display: flex;
-    margin-top: 30em;
-    font-family: 'Sansita Swashed', sans-serif;
-    justify-content: center;
-}
-.headerBar {
-    position:absolute;
-    top:0;
-    height:70px;
-    padding:0 12px;
-    display:flex;
-    flex-wrap:wrap;
-    flex-direction:row;
-    align-items:center;
-    background-color:rgba(0,0,0,.1);
-    pointer-events:auto;
-}
-
-.headerBarRight {
-    right:0;
-    padding-left:20px;
-    border-radius:0 0 0 6px;
-}
-
-.imageButton {
-    display:inline-block!important;
-    background-size:contain;
-    background-repeat:no-repeat;
-    margin-left:4px;
-    pointer-events:all;
-    cursor:pointer;
-    -webkit-transition:all .2s;
-    transition:all .2s;
-}
-
-.imageButton:hover{
-    -webkit-transform:scale(.95);
-    transform:scale(.95);
-}
-
-.discordSocial {
-    width:50px;
-    height:56px;
-    background-image:url(./img/discord-normal.png);
-}
-
-.discordSocial:hover {
-    background-image:url(./img/discord-hover.png);
-}
-
-.discordSocial:active {
-    background-image:url(./img/discord-pressed.png);
-}
-
-.twitterSocial {
-    width:50px;
-    height:56px;
-    background-image:url(./img/twitter-normal.png);    
-}
-
-.twitterSocial:hover {
-    background-image:url(./img/twitter-hover.png);
-}
-
-.twitterSocial:active {
-    background-image:url(./img/twitter-pressed.png);
-}
-
-#header h1 {
-    display: flex;
-    font-size: 50px;
-}
-
-.banner {
+    background-image: url(img/banner.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    font-family: 'Papyrus';
+    color: white;
+    padding: 0;
+    margin: 0;
+    height: 100%;
     width: 100%;
-    height: 80vh;
-    margin-top: 6vh;
-    position:fixed;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    display: none;
+}
+
+a {
+    margin: 0;
+}
+
+#window-size-overlay {
+    position: fixed;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    display: none;
+    justify-content: center;
+    color: #000000 !important;
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: content-box;
+    z-index: 101;
+}
+
+#window-size-overlay center {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(rgba(4, 1, 1, 1), rgba(4, 1, 1, 0));
+    display: flex;
+    justify-content: center;
+    transition: background-color 0.2s;
+    z-index: 100;
+}
+
+.header-item {
+    width: 50px;
+    height: 50px;
+    margin-left: 5px;
+    margin-right: 5px;
+    display: block;
     text-align: center;
-  }
-  
-.banner img {
-    height : 75%;
-    width: 75%;
-  }
+    font-size: 30px;
+    line-height: 50px;
+    color: #F2F0F0;
+    transition: background-color 0.3s;
+}
+
+.header-logo {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.header-item img, .header-logo img {
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+}
+
+.jumpscare {
+    display: none;
+}
+
+.jumpscare, .jumpscare img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.main {
+    width: 100%;
+    height: auto;
+    padding: 30px;
+}
+
+.card {
+    width: 100%;
+    min-height: 15vh;
+    max-height: 50vh;
+    border-radius: 7px;
+    background-color: rgba(100, 100, 100, 0.473);
+    box-sizing: content-box;
+    transition: background-color 0.4s;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.card:hover, .card:focus {
+    background-color: rgba(59, 54, 54, 0.400);
+}
+
+#card-info {
+    display: flex;
+    flex-flow: row;
+}
+
+#card-info img {
+    width: 30%;
+    height: auto;
+}
+
+#card-discord iframe {
+    height: 50vh;
+    width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+    /*#header-container {
+        justify-content: center;
+    }
+
+    #header-logo, #header-item {
+        margin-left: 5px;
+        margin-right: 5px;
+    }*/
+}
+
+@keyframes jumpscareFadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        display: none;
+    }
+
+}
+
+@keyframes cardTransition {
+    0% {
+        height: 15vh;
+    }
+
+    100% {
+        height: 50vh;
+    }
+}
+
+@keyframes logoTransition {
+}
