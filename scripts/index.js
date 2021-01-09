@@ -2,21 +2,20 @@
 
 var getID = (id) => document.getElementById(id);
 
-var getClass = (classname, index) => {
-    return (index === undefined)
-        ? document.getElementsByClassName(classname)
-        : document.getElementsByClassName(classname)[index];
-}
+var getClass = (classname, index) => (index === undefined) ? document.getElementsByClassName(classname) : document.getElementsByClassName(classname)[index];
 
-// Init stuff
+//#region  Init stuff
 
 const bodyWrapper = getID("body-wrapper");
+const cards = getClass("card");
 
 window.addEventListener("load", () => {
     checkWindowSize(); // For detecting portrait mode
 });
 
-// Making the website mobile friendly :kappa:
+//#endregion
+
+//#region  Making the website mobile friendly :kappa:
 
 const windowSizeOverlay = getID("window-size-overlay");
 
@@ -38,11 +37,15 @@ function checkWindowSize(){
 
     if(landscape){
         document.body.style.backgroundSize = `133% ${h}px`;
-        document.body.style.height = h + "px";
+        document.body.style.height = `${h}px`;
+        getClass("main", 0).style.marginTop = `${h - 50}px`;
     }
+    document.body.style.display = "block";
 }
 
-// Header Logo animation on hover
+//#endregion
+
+//#region  Header Logo animation on hover
 
 const logo_img = getID("header-logo-img");
 
@@ -54,7 +57,9 @@ logo_img.addEventListener("mouseleave", () => {
     logo_img.src = "./img/logo.png";
 });
 
-// Jumpscare
+//#endregion
+
+//#region  Jumpscare
 
 const jumpscare_div = getClass("jumpscare", 0);
 const jumpscare_sound = new Audio("./sounds/jumpscare.mp3");
@@ -72,13 +77,4 @@ logo_img.addEventListener("click", () => {
     }, 4000);
 });
 
-// Background Music
-
-bodyWrapper.addEventListener("click", () => playBackgroundMusic);
-
-function playBackgroundMusic() {
-    console.log("lol");
-    const backgound_sound = new Audio("./sounds/background.mp3");
-    backgound_sound.loop = true;
-    backgound_sound.play();
-}
+//#endregion
